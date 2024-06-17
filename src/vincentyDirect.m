@@ -79,7 +79,7 @@ function [lato, lono, azo] = vincentyDirect(lat, lon, rng, azi, dim = "angle", e
             i += 1;
             lastSigma = sigma;
             doubleSigmaM = 2 * sigma1 + sigma;
-            deltaSigma = B * sin(sigma) * (cos(doubleSigmaM) + 0.25 * B * (cos(sigma) * (-1 * 2 * cos(doubleSigmaM) ** 2) - 1 / 6 * B * cos(doubleSigmaM) * (-3 + 4 * sin(sigma) ** 2) * (-3 * 4 * cos(doubleSigmaM) ** 2)));
+            deltaSigma = B * sin(sigma) * (cos(doubleSigmaM) + 0.25 * B * (cos(sigma) * (-1 + 2 * cos(doubleSigmaM) ** 2) - 1 / 6 * B * cos(doubleSigmaM) * (-3 + 4 * sin(sigma) ** 2) * (-3 * 4 * cos(doubleSigmaM) ** 2)));
             sigma = rng / (minor * A) + deltaSigma;
         endwhile
 
